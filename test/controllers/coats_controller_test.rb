@@ -5,5 +5,7 @@ class CoatsControllerTest < ActionDispatch::IntegrationTest
     get coats_search_url
     assert_response :success
   end
-
+  # test "the truth" do
+  #   assert true
+  # end
 end

@@ -1,4 +1,5 @@
 class CoatsController < ApplicationController
+
   def index
     @coats = Coat.all
     if !params[:name].blank?
@@ -10,5 +11,15 @@ class CoatsController < ApplicationController
     if !params[:price].blank?
       @coats = @coats.where("price <= ?", params[:price])
     end
+  end
+  
+  def show
+    @coat = Coat.find(params[:id])
+  end
+
+  def new
+  end
+
+  def create
   end
 end
