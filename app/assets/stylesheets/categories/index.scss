@@ -1,0 +1,30 @@
+.banner {
+  text-align: center;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.banner-content {
+  text-align: center;
+  color: white;
+}
+
+.card {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+
