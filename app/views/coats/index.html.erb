@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <form role="form" class="form-horizontal">
+        <div class="form-group search-form">
+          <h3> Coat Search </h3>
+          <%= form_tag(coats_path, :method => "get", class: "form-group search-field") do %>
+            <div class="col-xs-12 col-sm-12">
+              <%= label_tag :name, 'Coat title' %>
+              <%= text_field_tag :name, params[:search], placeholder: "name", class: "form-control search-field" %>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+              <%= label_tag :size, 'Choose your size' %>
+              <%= select_tag :size, options_for_select([["any size", ""], ["extra-small", "xs"], "medium", "large"], params[:size]), class: "form-control search-field" %>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+              <%= label_tag :size, 'Max price per week' %>
+              <%= number_field_tag :price, params[:search], placeholder: "10",class: "form-control search-field"  %>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+              <%= submit_tag "Search", class: "btn btn-primary search-field" %>
+            </div>
+          <% end %>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <h3> Test </h3>
+      <% @coats.each do |coat| %>
+          <%= coat.name %>
+      <% end %>
+    </div>
+  </div>
+</div>
