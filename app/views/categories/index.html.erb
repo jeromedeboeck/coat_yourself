@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="banner" style="background-image: url(../../assets/gatsby.png);">
+    <div class="banner-content">
+      <h1>Coat Yourself</h1>
+      <p>Get the best coat ever!</p>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-xs-12">
+      <% @categories.each do |category| %>
+      <%= link_to category_path(category) do %>
+      <div class="card" style="background-image: url( <%=category.photo %>);">
+        <div class="card-category">Category</div>
+        <div class="card-description">
+          <h2><%= category.name%></h2>
+        </div>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
