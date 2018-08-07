@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   height: 500px;
+  margin-bottom: 10px;
 }
 
 .banner h1 {
@@ -25,6 +26,16 @@
   background-position: center;
   color: white;
   position: relative;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px gray;
 }
+
+.card-link:hover {
+ opacity: 0.1;
+}
+
+
 
 

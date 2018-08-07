@@ -10,6 +10,7 @@ gem 'rails', '5.2.0'
 gem 'redis'
 
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary'
 
 
 gem 'autoprefixer-rails'
