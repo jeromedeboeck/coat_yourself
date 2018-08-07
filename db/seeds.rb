@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+crazy = Category.create(name:"crazy")
+
+6.times do
+  Coat.create(category: crazy, price: rand(40..200), size: "Medium")
+end
+
+"Creating 6 categories"
