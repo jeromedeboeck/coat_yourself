@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2018_08_07_145127) do
     t.string "size"
     t.bigint "user_id"
     t.bigint "review_id"
+    t.string "name"
     t.index ["category_id"], name: "index_coats_on_category_id"
     t.index ["review_id"], name: "index_coats_on_review_id"
     t.index ["user_id"], name: "index_coats_on_user_id"
