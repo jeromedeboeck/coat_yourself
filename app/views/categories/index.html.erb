@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="banner" style="background-image: url(../../assets/gatsby.png);">
-    <div class="banner-content">
+  <div class="category-banner" style="background-image: url(../../assets/gatsby.png);">
+    <div class="category-banner-content">
       <h1>Coat Yourself</h1>
-      <p>Get the best coat ever!</p>
+      <p>Get the best coats ever!</p>
     </div>
   </div>
 
@@ -10,9 +10,9 @@
     <div class="col-xs-12">
       <% @categories.each do |category| %>
       <%= link_to category_path(category) do %>
-      <div class="card" style="background-image: url( <%=category.photo %>);">
-        <div class="card-category">Category</div>
-        <div class="card-description">
+      <div class="category-card" style="background-image: url( <%=category.photo %>);">
+        <div class="category-card-category">Category</div>
+        <div class="category-card-description">
           <h2><%= category.name%></h2>
         </div>
       </div>
