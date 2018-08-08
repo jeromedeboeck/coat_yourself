@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'categories#index'
   resources :categories
   resources :coats do
     resources :bookings, only: [:new, :create, :show]
