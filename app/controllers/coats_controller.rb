@@ -12,9 +12,10 @@ class CoatsController < ApplicationController
       @coats = @coats.where("price <= ?", params[:price])
     end
   end
-  
+
   def show
     @coat = Coat.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
