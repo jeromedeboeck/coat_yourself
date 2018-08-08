@@ -3,9 +3,5 @@
 
 
 <div class="col-xs-12 col-sm-4">
-  <%= simple_form_for(@booking) do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.submit "request booking", class: "btn btn-primary" %>
-  <% end %>
+  <%= render "forms/booking_form" %>
 </div>

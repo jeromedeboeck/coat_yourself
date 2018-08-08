@@ -1,6 +1,16 @@
-<h1> Your Bookings </h1>
 
-<%= @booking.start_date %>
-<%= @booking.end_date %>
+<div class="container">
+  <div class="booking-confirmation">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <h1> 🎉 Congratulations! 🎉 </h1>
+      <h3> You just got coated </h3>
 
+      <p><strong> Your details </strong></p>
 
+      <p> Your email <%= current_user.email %> </p>
+      <p> The owner is <%= @coat.name%> <p>
+      <p> The start date is <%= @booking.start_date %> </p>
+      <p> The end date is <%= @booking.end_date %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+
+  <div class="form-group search-form">
+    <h3> Book This Coat! </h3>
+    <%= simple_form_for [@coat, @booking] do |f| %>
+      <div class="col-xs-12 col-sm-12">
+       <%= f.input :start_date %>
+      </div>
+      <div class="col-xs-12 col-sm-12">
+        <%= f.input :end_date %>
+      </div>
+      <div class="col-xs-12 col-sm-12">
+        <%= f.submit "submit request", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+
