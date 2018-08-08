@@ -5,12 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Coat.destroy_all
+Category.destroy_all
+User.destroy_all
 
-6.times do
-  Coat.create(category: "Army", price: rand(40..200), size: "Medium")
+
+require 'faker'
+
+
+16.times do
+  User.create(name: Faker::Name.name, email: Faker::Internet.email, password: "123456", location: Faker::Address.full_address)
 end
 
 Category.create(name: "Army", photo: "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533655051/2ad92f03deeca4aa5e8b2fb27e8de16b.jpg")
 Category.create(name: "Festival", photo: "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533655236/09-Flow-Festival-Branding-Pattern-Bond-on-BPO.jpg")
 Category.create(name: "Christmas", photo: "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533655433/christmas_pattern_2_by_anitess-d8b1udw.jpg")
 Category.create(name: "Animal", photo: "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533655763/800px_COLOURBOX13351686.jpg")
+
+User.all.each do |user|
+  6.times do
+    Coat.create(category: Category.all.sample, price: rand(5..100), size: ["small", "Medium", "Large"].sample, user: User.all.sample, name: Faker::Pokemon.move)
+  end
+end
+
+
+
+
