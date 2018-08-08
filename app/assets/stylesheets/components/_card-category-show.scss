@@ -1,4 +1,4 @@
-.card {
+.card-show {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
@@ -7,7 +7,8 @@
   position: relative;
   margin-top: 10px;
   margin-bottom: 10px;
-  box-shadow: 2px 3px 2px gray;
+  box-shadow: 2px 2px 2px gray;
+  border-radius: 3px;
 }
 .card-user {
   position: absolute;
@@ -16,23 +17,23 @@
   width: 40px;
   border-radius: 50%;
 }
-.card-category {
-  position: absolute;
+.card-category-cat-show {
+  position: relative;
   left: 10px;
   bottom: 2px;
   font-size: 15px;
   text-transform: uppercase;
 }
-.card-description {
-  position: absolute;
-  right: 10px;
+.card-description-cat-show {
+  position: relative;
+  left: 10px;
   bottom: 2px;
 }
-.card-description h2 {
+.card-description-cat-show h2 {
   text-align: center;
-  font-size: 24px;
+  font-size: 64px;
 }
-.card-description p {
+.card-description-cat-show p {
   font-size: 14px;
   opacity: 0.7;
   font-weight: lighter;
@@ -49,4 +50,7 @@
 }
 .card-link:hover {
   opacity: 0.1;
+}
+.big-container {
+  background-color: #FAFAFA;
 }
