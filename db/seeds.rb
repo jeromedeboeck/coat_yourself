@@ -9,9 +9,7 @@ Coat.destroy_all
 Category.destroy_all
 User.destroy_all
 
-
 require 'faker'
-
 
 16.times do
   User.create(name: Faker::Name.name, email: Faker::Internet.email, password: "123456", location: Faker::Address.full_address)
