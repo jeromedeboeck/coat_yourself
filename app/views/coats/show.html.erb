@@ -8,12 +8,15 @@
   <div class="row">
     <div class="col-xs-12 col-sm-6">
       <h3> Your coat details </h3>
-     <div class="list-group">
-      <a href="#" class="list-group-item">
-        <%= @coat.name %></a>
+      <div class="list-group">
+        <a href="#" class="list-group-item">
+          <%= @coat.name %></a>
         <a href="#" class="list-group-item"><%= @coat.size %></a>
         <a href="#" class="list-group-item"><%= @coat.price %>EUR</a>
       </div>
+    </div>
+      <div class="col-xs-12 col-sm-6">
+        <%= render "forms/booking_form" %>
     </div>
   </div>
 </div>
