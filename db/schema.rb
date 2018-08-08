@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_07_145127) do
+ActiveRecord::Schema.define(version: 2018_08_08_101617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,12 +69,8 @@ ActiveRecord::Schema.define(version: 2018_08_07_145127) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "location"
-    t.bigint "coat_id"
-    t.bigint "review_id"
-    t.index ["coat_id"], name: "index_users_on_coat_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["review_id"], name: "index_users_on_review_id"
   end
 
   add_foreign_key "bookings", "coats"
@@ -83,6 +79,4 @@ ActiveRecord::Schema.define(version: 2018_08_07_145127) do
   add_foreign_key "coats", "reviews"
   add_foreign_key "coats", "users"
   add_foreign_key "reviews", "users"
-  add_foreign_key "users", "coats"
-  add_foreign_key "users", "reviews"
 end

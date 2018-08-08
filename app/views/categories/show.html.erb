@@ -1,6 +1,6 @@
 <div class="big-container">
   <div class="container">
-    <div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+    <div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= @category.photo %>);">
       <div class="card-description-cat-show">
         <h2><%=@category.name%></h2>
       </div>
@@ -13,6 +13,7 @@
           <div class="col-xs-12 col-sm-6 col-md-3">
             <%= link_to coat_path(coat) do %>
               <div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+                <div class="card-category-name-show"><%= coat.name %></div>
                 <div class="card-category-cat-show"><%= coat.size %></div>
                 <div class="card-description-cat-show"><%= "#{coat.price} €"   %></div>
               </div>
