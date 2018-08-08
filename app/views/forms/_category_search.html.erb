@@ -1,0 +1,22 @@
+<form role="form" class="form-horizontal">
+  <div class="form-group search-form">
+    <h3> Find Your Coat! </h3>
+    <%= form_tag(coats_path, :method => "get", class: "form-group search-field") do %>
+      <div class="col-xs-12 col-sm-12">
+        <%= label_tag :name, 'Key words' %>
+        <%= text_field_tag :name, params[:search], placeholder: "key words", class: "form-control search-field" %>
+      </div>
+      <div class="col-xs-12 col-sm-12">
+        <%= label_tag :size, 'Choose your size' %>
+        <%= select_tag :size, options_for_select([["any size", ""], ["extra-small", "xs"], "medium", "large"], params[:size]), class: "form-control search-field" %>
+      </div>
+      <div class="col-xs-12 col-sm-12">
+        <%= label_tag :size, 'Max price per week' %>
+        <%= number_field_tag :price, params[:search], placeholder: "any price",class: "form-control search-field"  %>
+      </div>
+      <div class="col-xs-12 col-sm-12">
+        <%= submit_tag "Search", class: "btn btn-primary search-field" %>
+      </div>
+    <% end %>
+  </div>
+</form>
