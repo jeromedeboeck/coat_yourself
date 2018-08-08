@@ -7,12 +7,15 @@
   <!-- ----------------COAT FEATURES -------------------------- -->
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <h3> Your coat details </h3>
-      <div class="list-group">
-        <a href="#" class="list-group-item">
-          <%= @coat.name %></a>
-        <a href="#" class="list-group-item"><%= @coat.size %></a>
-        <a href="#" class="list-group-item"><%= @coat.price %>EUR</a>
+
+      <div class="form-group search-form">
+        <h3> Your coat details </h3>
+        <div class="features">
+          <p><strong>COAT </strong><%=@coat.name %></a></p>
+          <p><strong>SIZE </strong><%=@coat.size %></a></p>
+          <p><strong>PRICE </strong><%=@coat.price %>EUR</p>
+          <%= cl_image_tag @coat.photo  %>
+        </div>
       </div>
     </div>
       <div class="col-xs-12 col-sm-6">
