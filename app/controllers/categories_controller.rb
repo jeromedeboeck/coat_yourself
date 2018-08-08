@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
     @coats = @category.coats
     # Add search logic
     if !params[:name].blank?
-      @coats = @coats.where("name LIKE ?", "%#{params[:name]}%")
+      @coats = @coats.where("name LIKE ?", "%#{params[:name].capitalize}%")
     end
     if !params[:size].blank?
       @coats = @coats.where(size: params[:size])

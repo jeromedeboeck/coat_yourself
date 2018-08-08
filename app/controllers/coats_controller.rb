@@ -3,7 +3,7 @@ class CoatsController < ApplicationController
   def index
     @coats = Coat.all
     if !params[:name].blank?
-      @coats = @coats.where("name LIKE ?", "%#{params[:name]}%")
+      @coats = @coats.where("name LIKE ?", "%#{params[:name].downcase}%")
     end
     if !params[:size].blank?
       @coats = @coats.where(size: params[:size])
