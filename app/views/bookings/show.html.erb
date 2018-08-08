@@ -11,6 +11,9 @@
         <p> The owner is <%= @coat.name%> <p>
         <p> The start date is <%= @booking.start_date %> </p>
         <p> The end date is <%= @booking.end_date %>
+        <div>
+          <%= link_to "Continue", categories_path , class: 'btn btn-danger' %>
+        </div>
       </div>
     </div>
   </div>
