@@ -8,7 +8,7 @@
       </div>
       <div class="col-xs-12 col-sm-12">
         <%= label_tag :size, 'Choose your size' %>
-        <%= select_tag :size, options_for_select([["any size", ""], ["extra-small", "xs"], "medium", "large"], params[:size]), class: "form-control search-field" %>
+        <%= select_tag :size, options_for_select([["any size", ""], ["small", "small"], ["medium", "Medium"], ["large", "Large"]], params[:size]), class: "form-control search-field" %>
       </div>
       <div class="col-xs-12 col-sm-12">
         <%= label_tag :size, 'Max price per week' %>
