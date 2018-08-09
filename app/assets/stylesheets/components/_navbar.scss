@@ -1,6 +1,6 @@
 /* Main navbar */
 .navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: #3579BE;
   transition: all 0.3s ease;
   height: 70px;
@@ -8,6 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-wagon-blue {
+  background-color: $primary_blue;
 }
 
 /* Logo */
@@ -40,6 +46,20 @@
   color: white;
   font-size: 14px;
 }
+
+.navbar-wagon-join {
+  border: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: white;
+}
+
+.navbar-wagon-join:hover {
+  color: #89a4c7;
+  border-color: #89a4c7;
+  text-decoration: none;
+}
+
 .navbar-wagon-link:hover {
   color: #89a4c7;
   text-decoration: none;
