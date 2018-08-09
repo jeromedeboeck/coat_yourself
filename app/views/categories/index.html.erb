@@ -1,68 +1,16 @@
-<div class="container">
-  <div class="category-banner" style="background-image: url(https://res.cloudinary.com/dzcwxfufs/image/upload/v1533737761/Screen-Shot-2017-04-15-at-7.59.03-PM.png);">
-    <div class="category-banner-content">
-      <h1>Coat Yourself</h1>
-    </div>
+<div class="category-banner" style="background-image: url(https://res.cloudinary.com/dzcwxfufs/image/upload/v1533737761/Screen-Shot-2017-04-15-at-7.59.03-PM.png);">
+  <div class="category-banner-content">
+    <h1>Coat Yourself</h1>
   </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <% @categories.each do |category| %>
-      <%= link_to category_path(category) do %>
-      <div class="category-card" style="background-image: url( <%=category.photo %>);">
-        <div class="category-card-category">Category</div>
-        <div class="category-card-description">
-          <h2><%= category.name%></h2>
-        </div>
-      </div>
-      <% end %>
-      <% end %>
-    </div>
-  </div>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum voluptas voluptate quos eum quae aspernatur quidem optio facilis labore quis. Tenetur quos consequuntur mollitia possimus aperiam odit praesentium quod excepturi!</p>
 </div>
+
+<% @categories.each do |category| %>
+  <%= link_to category_path(category) do %>
+  <div class="category-card" style="background-image: url( <%=category.photo %>);">
+    <div class="category-card-category">Category</div>
+    <div class="category-card-description">
+      <h2><%= category.name%></h2>
+    </div>
+  </div>
+  <% end %>
+<% end %>

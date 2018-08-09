@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'categories#index'
+  root to: 'pages#home'
   get "pages/dashboard"
   resources :categories
   resources :coats do
