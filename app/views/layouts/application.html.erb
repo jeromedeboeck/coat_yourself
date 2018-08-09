@@ -14,12 +14,12 @@
 
   </head>
   <body>
+    <% if current_page?(root_path) %>
+      <%= render 'shared/navbar-transparent' %>
+    <% else %>
+      <%= render 'shared/navbar-blue' %>
+    <% end %>
     <div class="container-fluid">
-      <% if current_page?(root_path) %>
-        <%= render 'shared/navbar-transparent' %>
-      <% else %>
-        <%= render 'shared/navbar-blue' %>
-      <% end %>
       <%= yield %>
     </div>
     <%= javascript_include_tag 'application' %>
