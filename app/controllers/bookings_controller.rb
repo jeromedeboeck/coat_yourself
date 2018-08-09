@@ -2,6 +2,11 @@ class BookingsController < ApplicationController
   def index
     @user  = current_user
     @bookings = Booking.where(user: @user)
+    @categories = []
+    @bookings.each do |booking|
+      @categories << booking.coat.category
+    end
+    @categories = @categories.uniq
   end
 
   def new
@@ -15,7 +20,7 @@ class BookingsController < ApplicationController
     @booking.coat = @coat
     @booking.user = current_user
     if @booking.save
-      redirect_to coat_booking_path(@coat, @booking)
+      redirect_to bookings_path
     else
       render :new
     end
