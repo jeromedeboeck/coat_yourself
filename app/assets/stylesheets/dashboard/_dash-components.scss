@@ -1,5 +1,9 @@
 // heirachy text, 2-3 levels, highlight next charge, total paid, cards
 
+.dash-container {
+  margin-top: 20px;
+}
+
 .base-card {
   background-color: #fff;
   border-radius: 4px;
@@ -72,4 +76,9 @@
   .form-button {
   font-size: 16px;
   }
+}
+
+.no-booking {
+  margin: 60px;
+  text-align: center;
 }
