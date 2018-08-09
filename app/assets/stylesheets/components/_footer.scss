@@ -1,0 +1,52 @@
+.footer {
+  background: $primary_blue;
+
+  padding: 40px 50px;
+  color: rgba(0,0,0,0.3);
+  color: white;
+}
+.footer-social-links {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.footer-social-links a {
+  color: white;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-social-links a:hover {
+  opacity: 1;
+}
+.footer-main-links {
+  display: flex;
+  flex-grow: 2;
+  justify-content: space-between;
+}
+.footer-main-links a {
+  color: white;
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0px 10px;
+}
+.footer-main-links a:hover {
+  color: white;
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}
+
+.footer-groups {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.footer-copyright {
+  justify-content: flex-end;
+  flex-grow: 1;
+}
