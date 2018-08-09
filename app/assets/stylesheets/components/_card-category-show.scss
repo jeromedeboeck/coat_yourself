@@ -46,6 +46,27 @@
   }
 }
 
+.card-show-cat {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 2px gray;
+  border-radius: 3px;
+}
+
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+
 .card-category-cat-show {
   position: relative;
   left: 10px;
