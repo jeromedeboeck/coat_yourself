@@ -39,9 +39,11 @@
   text-align: center;
   display: block;
   .btn {
-    padding: 15px;
+    padding: 5px 60px;
     font-size: 20px;
     border-radius: 6px;
+    background: linear-gradient(#2F80ED, #4579B9);
+    letter-spacing: 1px;
   }
 }
 

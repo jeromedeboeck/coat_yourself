@@ -1,9 +1,8 @@
 <div class="navbar-wagon navbar-fixed-top">
   <!-- Logo -->
-  <div>
-    <%= link_to root_path, class: "navbar-wagon-brand" do %>
-      <%= link_to "CoatYourslef", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
-  <!-- add link to logo check original code-->
+  <div class="coat-logo">
+    <%= link_to root_path do %>
+      <i class="fas fa-user-secret"></i>
     <% end %>
   </div>
 
@@ -13,7 +12,7 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "jerome.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to bookings_path do %>
