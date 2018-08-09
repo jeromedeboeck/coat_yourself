@@ -22,8 +22,8 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(params[:id])
-    @coat = Coat.find(params[:coat_id])
+    @user  = current_user
+    @bookings = Booking.where(user: @user)
   end
 
   private
