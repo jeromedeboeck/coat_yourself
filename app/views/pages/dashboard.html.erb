@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="col-xs-12 col-sm-10-col-sm-offset-1">
     <div class="linked-accounts" >
@@ -11,7 +12,6 @@
     </div>
     <!-- Start of a dashboard card -->
     <div class="base-card dashboard-card">
-
       <div class="sub-logo" style="background-image: url('http://cdn1.bigcommerce.com/n-ou1isn/qaxbjhup/products/670/images/4728/mens-santa-equality-black-santa-christmas-suit-coat-2__43510.1476363990.500.900.jpg?c=2');"></div>
       <div class="dash-card-item">
         <i class="fas fa-euro-sign"></i>
@@ -72,17 +72,17 @@
     </div>
     <!-- Start of a dashboard card -->
     <div class="base-card dashboard-card">
-      <div class="sub-logo" style="background-image: url(<%= @coat.photo %>);"></div>
+      <div class="sub-logo" style="background-image: url('https://www.easterncostume.com/files/MODUSA003/fullsize/5.jpg');"></div>
       <div class="dash-card-item">
         <i class="fas fa-euro-sign"></i>
         <h3>EUR <%= @coat.price %> /w</h3>
       </div>
       <div class="dash-detail-sum">
         <i class="fas fa-info-circle"></i>
-        <h3>Owner: <%= @coat.user.name %></h3>
+        <h3>The owner is <%= @coat.user.name %></h3>
       </div>
       <div class="dash-card-item">
-        <i class="far fa-calendar-alt"></i><h3><%= @booking.start_date %></h3>
+        <i class="far fa-calendar-alt"></i><h3>@booking.start_date</h3>
       </div>
       <div class="dash-button">
         <%= simple_form_for "#" do |f| %>

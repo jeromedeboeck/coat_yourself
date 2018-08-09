@@ -19,8 +19,24 @@ class CoatsController < ApplicationController
   end
 
   def new
+    @coat = Coat.new
   end
 
   def create
+    @coat = Coat.new(coat_params)
+    @coat.user = current_user
+    if @coat.save
+      redirect_to coat_path(@coat)
+    else
+      render 'new'
+    end
+  end
+
+  private
+
+  def coat_params
+    params.require(:coat).permit(:name, :price, :size, :category_id, :photo)
   end
 end
+
+

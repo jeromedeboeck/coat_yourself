@@ -1,0 +1,75 @@
+// heirachy text, 2-3 levels, highlight next charge, total paid, cards
+
+.base-card {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(3,49,86,.2);
+}
+
+.bank-card {
+  width: 140px;
+  height: 90px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    font-size: 32px;
+    color: #3579BE;
+  }
+}
+
+.linked-accounts {
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard-card {
+  margin: 15px 15px 30px 15px;
+  padding: 20px;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub-logo {
+  flex: none;
+  background-size: cover;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  background-color: black;
+}
+
+.dash-card-item {
+  flex: none;
+  display: flex;
+  i {
+  color: #3579BE;
+  font-size: 24px;
+  padding-right: 10px;
+  }
+}
+
+.dash-detail-sum {
+  flex: none;
+  display: flex;
+  i {
+  color: #3579BE;
+  font-size: 24px;
+  padding-right: 10px;
+  }
+}
+
+.dash-button{
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  .form-button {
+  font-size: 16px;
+  }
+}
