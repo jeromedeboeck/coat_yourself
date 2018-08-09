@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Booking.destroy_all
 Coat.destroy_all
 Category.destroy_all
 User.destroy_all
@@ -39,7 +40,9 @@ animal_jackets = [
 
 User.all.each do |user|
   3.times do
-    Coat.create(category: Category.all.last, price: rand(5..100), size: ["small", "Medium", "Large"].sample, user: User.all.sample, name: Faker::Pokemon.move, photo: animal_jackets.sample)
+    coat = Coat.new(category: Category.all.last, price: rand(5..100), size: ["small", "Medium", "Large"].sample, user: User.all.sample, name: Faker::Pokemon.move)
+    coat.remote_photo_url = animal_jackets.sample
+    coat.save
   end
 end
 
