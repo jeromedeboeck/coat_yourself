@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+
 
   def self.new_with_session(params, session)
     super.tap do |user|
