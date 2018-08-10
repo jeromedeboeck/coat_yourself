@@ -14,16 +14,16 @@
 
   </head>
   <body>
+    <% if current_page?(root_path) %>
+      <%= render 'shared/navbar-transparent' %>
+    <% else %>
+      <%= render 'shared/navbar-blue' %>
+    <% end %>
     <div class="container-fluid">
-      <% if user_signed_in? %>
-      <%= render 'shared/navbar-after-sign-in' %>
-      <% else %>
-      <%= render 'shared/navbar-before-sign-in' %>
-      <% end %>
       <%= yield %>
-      <%= render 'shared/footer' %>
     </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <%= render 'shared/footer' %>
   </body>
 </html>

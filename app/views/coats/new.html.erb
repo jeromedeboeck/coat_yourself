@@ -1,19 +1,21 @@
 
-<div class="container">
+<div class="form-container form-margin-top">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <h1>Add a new Coat</h1>
-
-      <%= simple_form_for @coat do |f| %>
+      <div class="form-card">
+        <h2>Add a new Coat</h2>
+        <%= simple_form_for @coat do |f| %>
         <%= f.input :name %>
         <%= f.input :category_id, label: "Category", collection: Category.all %>
         <%= f.input :price %>
         <%= f.input :size, collection: ["Small", "Medium", "Large"] %>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
-      <% end %>
+        <%= f.button :submit, class: "form-button" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
 

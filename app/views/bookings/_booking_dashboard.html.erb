@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container dash-container">
   <div class="col-xs-12 col-sm-10-col-sm-offset-1">
     <div class="linked-accounts" >
       <div class="base-card bank-card" style="background-image: url( https://res.cloudinary.com/dzcwxfufs/image/upload/v1533655051/2ad92f03deeca4aa5e8b2fb27e8de16b.jpg);">
@@ -9,67 +9,12 @@
         <i class="fas fa-plus-circle"></i>
       </div>
     </div>
-    <!-- Start of a dashboard card -->
-    <div class="base-card dashboard-card">
-
-      <div class="sub-logo" style="background-image: url('http://cdn1.bigcommerce.com/n-ou1isn/qaxbjhup/products/670/images/4728/mens-santa-equality-black-santa-christmas-suit-coat-2__43510.1476363990.500.900.jpg?c=2');"></div>
-      <div class="dash-card-item">
-        <i class="fas fa-euro-sign"></i>
-        <h3>EUR 10 /w</h3>
-      </div>
-      <div class="dash-detail-sum">
-        <i class="fas fa-info-circle"></i>
-        <h3>$100 over last 12 months</h3>
-      </div>
-      <div class="dash-card-item">
-        <i class="far fa-calendar-alt"></i><h3>18 Sep 2018</h3>
-      </div>
-      <div class="dash-button">
-        <%= simple_form_for "#" do |f| %>
-          <%= f.button :submit, "Reminder", class: "form-button" %>
+    <!-- Check if any bookings -->
+    <% if @bookings.blank? %>
+      <div class="no-booking">
+        <h3><%= "You have no bookings yet!" %></h3>
         <% end %>
       </div>
-    </div>
-    <!-- Start of a dashboard card -->
-    <div class="base-card dashboard-card">
-      <div class="sub-logo" style="background-image: url('https://inhabitat.com/ecouterre/wp-content/blogs.dir/26/files/2013/12/fur-coat-1.jpg');"></div>
-      <div class="dash-card-item">
-        <i class="fas fa-euro-sign"></i>
-        <h3>EUR 10 /w</h3>
-      </div>
-      <div class="dash-detail-sum">
-        <i class="fas fa-info-circle"></i>
-        <h3>$100 over last 12 months</h3>
-      </div>
-      <div class="dash-card-item">
-        <i class="far fa-calendar-alt"></i><h3>18 Sep 2018</h3>
-      </div>
-      <div class="dash-button">
-        <%= simple_form_for "#" do |f| %>
-          <%= f.button :submit, "Reminder", class: "form-button" %>
-        <% end %>
-      </div>
-    </div>
-    <!-- Start of a dashboard card -->
-    <div class="base-card dashboard-card">
-      <div class="sub-logo" style="background-image: url('https://www.easterncostume.com/files/MODUSA003/fullsize/5.jpg');"></div>
-      <div class="dash-card-item">
-        <i class="fas fa-euro-sign"></i>
-        <h3>EUR 10 /w</h3>
-      </div>
-      <div class="dash-detail-sum">
-        <i class="fas fa-info-circle"></i>
-        <h3>$100 over last 12 months</h3>
-      </div>
-      <div class="dash-card-item">
-        <i class="far fa-calendar-alt"></i><h3>18 Sep 2018</h3>
-      </div>
-      <div class="dash-button">
-        <%= simple_form_for "#" do |f| %>
-          <%= f.button :submit, "Reminder", class: "form-button" %>
-        <% end %>
-      </div>
-    </div>
     <!-- Start of a dashboard card -->
     <% @bookings.each do |booking| %>
       <div class="base-card dashboard-card">
