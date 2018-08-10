@@ -18,6 +18,12 @@ class CoatsController < ApplicationController
 
     @coat = Coat.find(params[:id])
     @booking = Booking.new
+
+    @markers = [
+      {
+        lat: @coat.user.latitude,
+        lng: @coat.user.longitude
+      }]
   end
 
   def new

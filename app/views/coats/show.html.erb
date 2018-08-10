@@ -23,6 +23,12 @@
         <%= render "forms/booking_form" %>
     </div>
   </div>
+  <div
+    class="map-img"
+    style="background-image: url('https://res.cloudinary.com/dzcwxfufs/image/upload/v1533913574/samples/map.png')"
+    data-markers="<%= @markers.to_json %>">
+  </div>
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
 </div>
 
 
