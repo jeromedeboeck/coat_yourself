@@ -26,6 +26,11 @@
 .bank-card:hover {
   cursor: pointer;
   box-shadow: 0 2px 3px rgb(3,49,86);
+  i {
+    font-size: 32px;
+    color: #3579BE;
+    box-shadow: 0;
+  }
 }
 
 .form-button:focus {
