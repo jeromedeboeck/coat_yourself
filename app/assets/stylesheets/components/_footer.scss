@@ -1,27 +1,30 @@
 .footer {
-  background: $primary_blue;
+  background: linear-gradient(#5486E0, #4579B9);
   padding: 20px 30px;
   color: rgba(0,0,0,0.3);
   color: white;
+  width: 100%;
 }
 .footer-social-links {
   flex-grow: 1;
   display: flex;
   align-items: center;
+  color: white;
 }
 .footer-social-links a {
   color: white;
-  opacity: 0.15;
+  opacity: 0.8;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-social-links a:hover {
   opacity: 1;
+  color: white;
 }
 .footer-main-links {
   display: flex;
-  flex-grow: 2;
+  flex-grow: 1;
   justify-content: space-between;
 }
 .footer-main-links a {
@@ -34,6 +37,7 @@
 .footer-main-links a:hover {
   color: white;
   opacity: 1;
+  text-decoration: none;
 }
 .footer .fa-heart {
   color: #D23333;
@@ -48,4 +52,6 @@
 .footer-copyright {
   justify-content: flex-end;
   flex-grow: 1;
+  text-align: end;
+  display: flex;
 }
