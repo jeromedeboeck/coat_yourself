@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
+  before_action :set_user, only: [:index, :show]
+
   def index
-    @user  = current_user
-    @bookings = Booking.where(user: @user)
     @categories = []
     @bookings.each do |booking|
       @categories << booking.coat.category
@@ -27,11 +27,14 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @user  = current_user
-    @bookings = Booking.where(user: @user)
   end
 
   private
+
+  def set_user
+    @user  = current_user
+    @bookings = Booking.where(user: @user)
+  end
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :coat_id, :user_id)

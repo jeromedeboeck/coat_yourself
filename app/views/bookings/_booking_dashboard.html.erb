@@ -25,31 +25,34 @@
       </div>
     <% end %>
     <!-- Start of a dashboard card -->
-    <% @bookings.each do |booking| %>
-      <div class="base-card dashboard-card">
-        <div class="sub-logo" style="background-image: url(<%= booking.coat.photo %>);"></div>
-        <div class="dash-card-item">
-          <i class="fas fa-euro-sign"></i>
-          <h3>EUR <%= booking.coat.price %> /w</h3>
-        </div>
-        <div class="dash-detail-sum">
-          <div class="d-flex align-items-center">
-            <i class="fas fa-info-circle"></i>
+    <div id="sub-cards">
+      <% @bookings.each do |booking| %>
+        <div class="base-card dashboard-card">
+          <div class="sub-logo" style="background-image: url(<%= booking.coat.photo %>);"></div>
+          <div class="dash-card-item">
+            <i class="fas fa-euro-sign"></i>
+            <h3>EUR <%= booking.coat.price %> /w</h3>
           </div>
-          <div class="d-flex flex-column">
-            <h4 style="font-weight: lighter;">Title: <%= booking.coat.name %> </h4>
-            <h4 style="font-weight: lighter;">Category: <%= booking.coat.category.name %> </h4>
+          <div class="dash-card-item-cat hidden"><%= booking.coat.category.name %> </div>
+          <div class="dash-detail-sum">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="d-flex flex-column">
+              <h4 style="font-weight: lighter;">Title: <%= booking.coat.name %> </h4>
+              <h4 style="font-weight: lighter;">Category: <%= booking.coat.category.name %> </h4>
+            </div>
+          </div>
+          <div class="dash-card-item">
+            <i class="far fa-calendar-alt"></i><h3> <%= booking.start_date %> </h3>
+          </div>
+          <div class="dash-button">
+            <%= simple_form_for "#" do |f| %>
+              <%= f.button :submit, "Reminder", class: "form-button" %>
+            <% end %>
           </div>
         </div>
-        <div class="dash-card-item">
-          <i class="far fa-calendar-alt"></i><h3> <%= booking.start_date %> </h3>
-        </div>
-        <div class="dash-button">
-          <%= simple_form_for "#" do |f| %>
-            <%= f.button :submit, "Reminder", class: "form-button" %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
