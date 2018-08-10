@@ -8,11 +8,12 @@
         <% @categories.each do |category| %>
           <%= link_to category do %>
             <div class="base-card bank-card" style="background-image: url(<%= category.photo %>);">
+              <h3><strong><%= category.name %></strong></h3>
             </div>
           <% end %>
         <% end %>
       <% end %>
-      <%= link_to categories_path do %>
+      <%= link_to categories_path, class: "no-hover-link" do %>
         <div class="base-card bank-card" id="add-card">
           <i class="fas fa-plus-circle"></i>
         </div>
