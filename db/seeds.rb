@@ -12,12 +12,12 @@ User.destroy_all
 
 require 'faker'
 
-4.times do
+5.times do
   User.create(name: Faker::Name.name, email: Faker::Internet.email, password: "123456", location: Faker::Address.full_address)
 end
 
-Category.create(name: "Army", photo: "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533655051/2ad92f03deeca4aa5e8b2fb27e8de16b.jpg")
 Category.create(name: "Festival", photo: "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533655236/09-Flow-Festival-Branding-Pattern-Bond-on-BPO.jpg")
+Category.create(name: "Army", photo: "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533655051/2ad92f03deeca4aa5e8b2fb27e8de16b.jpg")
 Category.create(name: "Christmas", photo: "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533655433/christmas_pattern_2_by_anitess-d8b1udw.jpg")
 Category.create(name: "Animal", photo: "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533655763/800px_COLOURBOX13351686.jpg")
 
@@ -34,9 +34,35 @@ animal_jackets = [
   "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533730983/1489373020346095447.jpg",
   "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533730950/Printed-Long-Sleeved-jacket-Lovers-Coat-Cute-Cartoon-Hoodie-Hoody-Giraffe-Modeling-Adult-Cotton-Animal-Women.jpg_640x640.jpg",
   "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533730907/0000000030000562_01.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533893495/03fc672daf89ae8d825175e787297431--golden-tiger-sf.jpg",
+]
+
+festival_jackets = [
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533892044/Festifal/Gypsy-Soul-Oleg-Burn.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533892063/Festifal/j5gmqz-l-610x610-coat-festival_style-sequin-sequins-pastel-coachella-burning_man_coat-boho_chic-future-rainbow-fake_fur-faux_fur_jacket-faux_fur_coat-festival-festival-burning_man-boho-boho_chic_fa.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533892071/Festifal/burning-man-fur-coat.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533892294/Festifal/images.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533892105/Festifal/7cd14b79d208b200b6b5fd4aec84d652.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533892113/Festifal/s-l300.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533893086/images.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533893136/m_5a323017522b456b96018d2b.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533893171/bm-fur-coat-copy.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533893305/images.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533893394/images.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533893516/images.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533893595/878f9588c38000012fd01aecc03feb39.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533893632/il_340x270.1563226798_mpyx.jpg",
+  "https://res.cloudinary.com/dzcwxfufs/image/upload/v1533893698/il_340x270.1260229588_fgxr.jpg",
 ]
 
 
+User.all.each do |user|
+  3.times do
+    coat = Coat.new(category: Category.all.first, price: rand(5..100), size: ["small", "Medium", "Large"].sample, user: User.all.sample, name: Faker::Pokemon.move)
+    coat.remote_photo_url = festival_jackets.sample
+    coat.save
+  end
+end
 
 User.all.each do |user|
   3.times do
@@ -45,8 +71,3 @@ User.all.each do |user|
     coat.save
   end
 end
-
-
-
-
-

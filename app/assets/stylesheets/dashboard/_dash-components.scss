@@ -23,14 +23,29 @@
   }
 }
 
+.bank-card:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgb(3,49,86);
+  i {
+    font-size: 32px;
+    color: #3579BE;
+    box-shadow: 0;
+  }
+}
+
+.form-button:focus {
+  box-shadow: 0 0 5px 2px rgb(3,49,86);
+}
+
 .linked-accounts {
   display: flex;
   flex-direction: row;
+  margin-bottom: 30px;
 }
 
 .dashboard-card {
-  margin: 15px 15px 30px 15px;
-  padding: 20px;
+  margin: 30px 15px;
+  padding: 60px 20px;
   display: flex;
   height: 100px;
   align-items: center;
@@ -50,19 +65,19 @@
   flex: none;
   display: flex;
   i {
-  color: #3579BE;
-  font-size: 24px;
-  padding-right: 10px;
+    color: #3579BE;
+    font-size: 24px;
+    padding-right: 10px;
   }
 }
 
 .dash-detail-sum {
-  flex: 0 0 250px;
+  flex: none;
   display: flex;
   i {
-  color: #3579BE;
-  font-size: 24px;
-  padding-right: 10px;
+    color: #3579BE;
+    font-size: 24px;
+    padding-right: 10px;
   }
 }
 
@@ -74,7 +89,7 @@
   width: 100px;
   height: 50px;
   .form-button {
-  font-size: 16px;
+    font-size: 16px;
   }
 }
 
