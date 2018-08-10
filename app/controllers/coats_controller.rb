@@ -1,4 +1,5 @@
 class CoatsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @coats = Coat.all
@@ -14,6 +15,7 @@ class CoatsController < ApplicationController
   end
 
   def show
+
     @coat = Coat.find(params[:id])
     @booking = Booking.new
   end
