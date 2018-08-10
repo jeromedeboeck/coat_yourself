@@ -39,9 +39,11 @@
   text-align: center;
   display: block;
   .btn {
-    padding: 15px;
+    padding: 5px 60px;
     font-size: 20px;
     border-radius: 6px;
+    background: linear-gradient(#2F80ED, #4579B9);
+    letter-spacing: 1px;
   }
 }
 
@@ -84,4 +86,9 @@ p {
   border-radius: 5px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   height: 100px;
+}
+
+.container-fluid {
+  padding-right: 0px;
+  background-color: #FDFCFD;
 }
